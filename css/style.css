@@ -876,14 +876,13 @@ body {
 }
 
 .checkbox-label {
+  line-height: 1.714;
+  margin: 20px 12px;
+  align-items: center;
+  letter-spacing: 0.03em;
+  display: flex;
+  color: var(--main-text-color);
   font-size: 14px;
-line-height: 1.714;
-margin: 20px 12px;
-align-items: center;
-
-letter-spacing: 0.03em;
-display: flex;
-color: var(--main-text-color);
 }
 
 .checkbox-label::before {
