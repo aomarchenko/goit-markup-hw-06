@@ -517,7 +517,11 @@
     <!--Modal-window-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close-btn" data-modal-close></button>
+        <button class="modal-close-btn" data-modal-close>
+          <svg class="icon">
+            <use href="./images/symbol-defs.svg#icon-close"/>
+        </svg>
+        </button>
         <form class="modal-form">
           <h2 class="modal-form-title">Оставьте свои данные, мы вам перезвоним</h2>
           <ul class="modal-form-fields">
@@ -555,7 +559,7 @@
                   <label class="field-label" for="checkbox">
                       <input class="field-checkbox" type="checkbox" name="checkbox" id="checkbox" value="checkbox"/>
                       <svg class="checkbox-icon" width="16" height="15">
-                          <use href="./images/check-mark.svg"></use>
+                          <use href="./images/symbol-defs.svg#icon-check"></use>
                       </svg>
                       Соглашаюсь с рассылкой и принимаю 
                       <a href="./" class="link">Условия договора</a>
