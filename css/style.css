@@ -475,6 +475,7 @@ body {
   border: 1px solid var(--svg);
   border-radius: 4px;
 }
+
 .reg-client-icon {
   fill: currentColor;
   margin: 16px 32px;
@@ -502,6 +503,8 @@ body {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  margin-left: 30px;
+  
 }
 
 .social-networks:hover,
@@ -532,11 +535,11 @@ body {
   flex-basis: calc(100% / 3 -30px);
   text-align: left;
 }
-.portfolio-list-item > a {
+.portfolio-list-item-link {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.card-container p {
+.card-paragraf {
   color: var(--main-text-color);
 }
 
