@@ -778,8 +778,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 528px;
-  height: 581px;
+  
   background-color: var(--simple-white);
   border-radius: 4px;
   line-height: 1.16;
@@ -804,110 +803,107 @@ body {
   background-image: url("../images/close-black.svg");
   background-size: contain;
 }
-.modal-username, .modal-mail, .modal-tel {
+
+.modal-form,
+.modal-form-fields,
+.modal-form-field {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form {
+  width: 528px;
+  height: 581px;
+}
+.modal-form-title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--header-text-color);
+    font-size: 20px;
+    
+}
+.modal-form-fields {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.modal-form-field:not(:last-child) {
+  margin-bottom: 10px;
+}
+.modal-form-field label {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.form-field,
+.modal-form-field textarea {
+  padding-left: 42px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-field {
   position: relative;
 }
 
-.modal-name-icon{
+.form-icon {
   position: absolute;
   top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-}
-.modal-title{
-  margin-bottom: 12px;
-  
-  font-weight: 700;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--header-text-color);
-  font-size: 20px;
+  left: 12px;
+  margin: 0;
+  padding: 3px;
 
-}
-.modal-input{
-  width: 448px;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  margin-bottom: 10px;
-  border-radius: 4px;
-  margin-top: 4px;
-}
-.modal-input-comment {
-  width: 448px;
-  height: 120px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  margin-bottom: 10px;
-  border-radius: 4px;
-  padding: 12px 16px;
-  margin-top: 4px;
-
-}
-.modal-input-comment::placeholder {
-  
-  transform: translateY(-48px);
-}
-.modal-btn {
-  display: block;
-  margin: 30px auto;
-  height: 50px;
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  color: var(--simple-white);
-  border-color:transparent ;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-  width: 200px;
-}
-
-
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
-
-.checkbox-label {
-  line-height: 1.714;
-  margin: 20px 12px;
-  align-items: center;
-  letter-spacing: 0.03em;
-  display: flex;
-  color: var(--main-text-color);
-  font-size: 14px;
-}
-
-.checkbox-label::before {
-  content: "";
   display: inline-block;
-  width: 16px;
-  height: 15px;
-  background-color: var(--simple-white);
-  border-color: var(--header-text-color);
-  border: solid 2px;
-  border-radius: 2px;
-  margin-right: 7px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-field:focus-within .form-field,
+.modal-form-field:hover .form-field,
+.modal-form-field:focus-within textarea,
+.modal-form-field:hover textarea {
+  border: 1px solid var(--accent-color);
+}
+.modal-form-field:focus-within > .form-icon,
+.modal-form-field:hover > .form-icon {
+  fill: var(--accent-color);
 }
 
-.checkbox:checked + .checkbox-label::before {
-  background-image: url("../images/check-mark.svg");
-  fill: var(--simple-white);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-color: var(--accent-color);
-  
+.modal-form-field textarea {
+  resize: none;
+  height: 120px;
+  font-size: 12px;
+  padding: 12px 16px;
 }
 
-.checkbox-link {
+.checkbox {
+  margin-bottom: 30px;
+}
+.field-checkbox {
+  appearance: none;
+}
+.field-checkbox:focus-within + .checkbox-icon {
+  border: 2px solid var(--accent-color);
+}
+.field-label {
+  display: block;
+}
+.field-label .link {
   color: var(--accent-color);
   text-decoration: underline;
 }
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0;
+  border: 2px solid var(--header-text-color);
+  border-radius: 2px;
+}
+.field-checkbox:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  
+}
+
+
+
+
